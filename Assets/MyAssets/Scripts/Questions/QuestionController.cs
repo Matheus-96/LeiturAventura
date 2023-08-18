@@ -8,13 +8,19 @@ using Newtonsoft.Json;
 
 public class QuestionController : MonoBehaviour
 {
-    public List<Question> Questions = new List<Question>();
+    public Page page;
+    public List<Question> questionList;
     public GameObject statementUI;
     public GameObject[] buttonsUI;
+    public BalloonController balloonController;
+
+    public GameObject questionsPanelUI;
+    public GameObject statementPanelUI;
 
     // Start is called before the first frame update
     void Start()
     {
+        questionList = page.GetQuestions();
     }
 
     // Update is called once per frame
@@ -22,31 +28,58 @@ public class QuestionController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            StartCoroutine(GetQuestionsFromLevel());
+            //StartCoroutine(GetQuestionsFromLevel());
         }
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            ShowQuestionOnScreen(Random.Range(0, Questions.Count));
+            ShowQuestionOnScreen(Random.Range(0, questionList.Count));
         }
     }
 
     public void ShowQuestionOnScreen(int questionIndex)
     {
-        Question question = Questions[questionIndex];
-        
-        statementUI.GetComponent<TextMeshProUGUI>().text = question.statement;
+        var _question = questionList[questionIndex];
+        statementUI.GetComponent<TextMeshProUGUI>().text = _question.Enunciado;
 
+        if (_question is QuestionText questionText)
+        {
+            FillTextAnswers(questionText);
+        }
+        else if (_question is QuestionImage questionImage)
+        {
+            FillImageAnswers(questionImage);
+        }
+    }
+
+    private void FillTextAnswers(QuestionText question)
+    {
         int index = 0;
         foreach (GameObject button in buttonsUI)
         {
-            bool isCorrect = index == question.correctAnswer;
-            Debug.Log(question.answers.Length);
-            button.GetComponent<ButtonController>().SetButtonData(question.answers[index], isCorrect);
+            bool isCorrect = index == question.respostaCorreta;
+            button.GetComponent<ButtonController>().SetButtonText(question.respostas[index], isCorrect);
             index++;
         }
     }
 
+    private void FillImageAnswers(QuestionImage questionImage)
+    {
+        int index = 0;
+        foreach (GameObject button in buttonsUI)
+        {
+            bool isCorrect = index == questionImage.respostaCorreta;
+            button.GetComponent<ButtonController>().SetButtonImage(questionImage.respostas[index], isCorrect);
+            index++;
+        }
+    }
+
+    public void DisableUI()
+    {
+        questionsPanelUI.SetActive(false);
+        statementPanelUI.SetActive(false);
+    }
+    /*
     IEnumerator GetQuestionsFromLevel()
     {
         using(UnityWebRequest request = UnityWebRequest.Get("https://run.mocky.io/v3/0e6908ed-7175-4d67-b433-a03172be0da8"))
@@ -64,4 +97,5 @@ public class QuestionController : MonoBehaviour
             }
         }
     }
+    */
 }
