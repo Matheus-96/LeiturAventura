@@ -10,6 +10,7 @@ public class BalloonController : MonoBehaviour
 
     public SpriteRenderer imageUI;
     public TextMeshPro textUI;
+
     public void SetImage(Sprite image)
     {
         imageUI.gameObject.SetActive(true);
@@ -17,18 +18,46 @@ public class BalloonController : MonoBehaviour
 
         imageUI.color = new Color(1, 1, 1, 0);
         imageUI.sprite = image;
-        StartCoroutine(TweenColor());
+        StartCoroutine(TweenColorImage(imageUI));
+    }
+    public void SetText(string text)
+    {
+        textUI.gameObject.SetActive(true);
+        imageUI.gameObject.SetActive(false);
+
+        textUI.color = new Color(0, 0, 0, 0);
+        textUI.text = text;
+        StartCoroutine(TweenColorText(textUI));
     }
 
-    public IEnumerator TweenColor()
+    public IEnumerator TweenColorImage(SpriteRenderer sprite)
     {
         float alpha = 0f;
         while (alpha < 1f)
         {
-            imageUI.color = new Color(1, 1, 1, alpha);
+            sprite.color = new Color(1, 1, 1, alpha);
             alpha += Time.deltaTime * 0.5f;
             yield return null;
         }
         yield return null;
+    }
+    public IEnumerator TweenColorText(TextMeshPro text)
+    {
+        float alpha = 0f;
+        while (alpha < 1f)
+        {
+            text.color = new Color(0, 0, 0, alpha);
+            alpha += Time.deltaTime * 0.5f;
+            yield return null;
+        }
+        yield return null;
+    }
+
+    private void OnMouseDown()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            LevelController.Instance.ShowQuestion();
+        }
     }
 }

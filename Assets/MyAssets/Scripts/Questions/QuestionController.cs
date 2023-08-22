@@ -14,8 +14,6 @@ public class QuestionController : MonoBehaviour
     public GameObject[] buttonsUI;
     public BalloonController balloonController;
 
-    public GameObject questionsPanelUI;
-    public GameObject statementPanelUI;
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +31,13 @@ public class QuestionController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
-            ShowQuestionOnScreen(Random.Range(0, questionList.Count));
+            ShowRandomQuestionOnScreen();
         }
     }
 
-    public void ShowQuestionOnScreen(int questionIndex)
+    public void ShowRandomQuestionOnScreen()
     {
+        int questionIndex = Random.Range(0, questionList.Count);
         var _question = questionList[questionIndex];
         statementUI.GetComponent<TextMeshProUGUI>().text = _question.Enunciado;
 
@@ -74,11 +73,7 @@ public class QuestionController : MonoBehaviour
         }
     }
 
-    public void DisableUI()
-    {
-        questionsPanelUI.SetActive(false);
-        statementPanelUI.SetActive(false);
-    }
+
     /*
     IEnumerator GetQuestionsFromLevel()
     {

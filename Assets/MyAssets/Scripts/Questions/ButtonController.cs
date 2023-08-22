@@ -11,7 +11,13 @@ public class ButtonController : MonoBehaviour
     public bool isCorrectAnswer;
     public BalloonController balloonController;
     public QuestionController questionController;
-    // Start is called before the first frame update
+    private Animation animation;
+    public GameObject particleSystem;
+
+    private void Awake()
+    {
+        animation = GetComponent<Animation>();
+    }
     public void SetButtonText(string text, bool _isCorrectAnswer)
     {
         textMesh.enabled = true;
@@ -28,17 +34,19 @@ public class ButtonController : MonoBehaviour
     }
     public void Evaluate()
     {
-        Debug.Log("teste");
         if(isCorrectAnswer)
         {
-            questionController.DisableUI();
-
-            if (imageUI.enabled)
+            LevelController.Instance.DisableUI();
+            Instantiate(particleSystem, transform.position, transform.rotation, LevelController.Instance.CanvasUI.transform);
+            if (imageUI.enabled) 
                 balloonController.SetImage(imageUI.sprite);
-            /*
+            
             else
                 balloonController.SetText(textMesh.text);
-            */
+            
+        } else
+        {
+            animation.Play();
         }
         
     }
