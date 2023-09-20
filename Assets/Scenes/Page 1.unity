@@ -455,6 +455,7 @@ MonoBehaviour:
   isCorrectAnswer: 0
   balloonController: {fileID: 433707517}
   questionController: {fileID: 554461487}
+  particleSystem: {fileID: 0}
 --- !u!111 &204862121
 Animation:
   m_ObjectHideFlags: 0
@@ -862,6 +863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c136dee64944b7c4ba4b4f72f7757d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelUI: {fileID: 2105094956}
   CanvasUI: {fileID: 172675168}
   questionsPanelUI: {fileID: 449597511}
   statementPanelUI: {fileID: 104511436}
@@ -11225,6 +11227,7 @@ MonoBehaviour:
   isCorrectAnswer: 0
   balloonController: {fileID: 433707517}
   questionController: {fileID: 554461487}
+  particleSystem: {fileID: 0}
 --- !u!114 &1295235122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11742,6 +11745,7 @@ MonoBehaviour:
   isCorrectAnswer: 0
   balloonController: {fileID: 433707517}
   questionController: {fileID: 554461487}
+  particleSystem: {fileID: 0}
 --- !u!111 &1541752560
 Animation:
   m_ObjectHideFlags: 0
