@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
     public static LevelController Instance;
 
     public GameObject PanelUI;
+    public Animator panelAnimator;
     public GameObject CanvasUI;
     public GameObject questionsPanelUI;
     public GameObject statementPanelUI;
@@ -16,21 +17,28 @@ public class LevelController : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        panelAnimator = PanelUI.GetComponent<Animator>();
     }
 
 
 
     void ShowUI()
     {
-        PanelUI.SetActive(true);
+        panelAnimator.SetBool("Showing", true);
+        /*
+         * PanelUI.SetActive(true);
         questionsPanelUI.SetActive(true);
         statementPanelUI.SetActive(true);
+        */
     }
     public void DisableUI()
     {
-        PanelUI.SetActive(false);
+        panelAnimator.SetBool("Showing", false);
+        /*
+         * PanelUI.SetActive(false);
         questionsPanelUI.SetActive(false);
         statementPanelUI.SetActive(false);
+        */
     }
     public void ShowQuestion()
     {

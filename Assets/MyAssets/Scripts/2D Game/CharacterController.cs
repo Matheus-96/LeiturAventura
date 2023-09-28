@@ -16,6 +16,18 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (grounded)
+            {
+                grounded = false;
+                rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+            }
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -27,14 +39,7 @@ public class CharacterController : MonoBehaviour
         }
         animator.SetFloat("speed", Mathf.Abs(walkDirection));
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            if(grounded)
-            {
-                grounded = false;
-                rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
-            }
-        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

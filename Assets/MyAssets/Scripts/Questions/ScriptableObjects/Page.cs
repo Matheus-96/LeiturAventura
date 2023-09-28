@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
-[CreateAssetMenu(fileName = "Página", menuName = "Página")]
+[CreateAssetMenu(fileName = "Page", menuName = "Questions/Book Page")]
 public class Page : ScriptableObject
 {
     [SerializeField]

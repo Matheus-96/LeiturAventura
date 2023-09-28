@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room 3D.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Luz Azul/LAZUL-0-START.unity
+    guid: 7b83518b7da972d4cac50e53991e1b5d
+  - enabled: 1
+    path: Assets/Scenes/Luz Azul/LAZUL-1-GAME.unity
+    guid: c799c91fccd1d0b4a8a9135108b0639a
+  - enabled: 1
+    path: Assets/Scenes/Luz Azul/LAZUL-1-QUESTION.unity
+    guid: 03a8fcda73ab29347a7c1fcf8e1bf95d
   m_configObjects: {}
