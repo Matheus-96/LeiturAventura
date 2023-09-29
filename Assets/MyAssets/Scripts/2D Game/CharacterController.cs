@@ -18,7 +18,7 @@ public class CharacterController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (SimpleInput.GetButton("action"))
         {
             if (grounded)
             {
@@ -31,7 +31,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float walkDirection = Input.GetAxis("Horizontal");
+        float walkDirection = SimpleInput.GetAxis("Horizontal");
         if (walkDirection != 0)
         {
             sprite.flipX = walkDirection < 0 ? true : false;
