@@ -37,13 +37,7 @@ public class ButtonController : MonoBehaviour
         if(isCorrectAnswer)
         {
             LevelController.Instance.DisableUI();
-            Instantiate(particleSystem, transform.position, transform.rotation, LevelController.Instance.CanvasUI.transform);
-            if (imageUI.enabled) 
-                balloonController.SetImage(imageUI.sprite);
-            
-            else
-                balloonController.SetText(textMesh.text);
-            
+            LevelController.Instance.DoNextStep();
         } else
         {
             animation.Play();

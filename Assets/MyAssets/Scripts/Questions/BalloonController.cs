@@ -58,6 +58,13 @@ public class BalloonController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             LevelController.Instance.ShowQuestion();
+            gameObject.SetActive(false);
         }
+    }
+
+    public void ShowBaloon()
+    {
+        gameObject.SetActive(true);
+        LevelController.Instance.MarkCurrentStepAsDone();
     }
 }

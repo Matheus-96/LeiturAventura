@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneGame: {fileID: 102900000, guid: 03a8fcda73ab29347a7c1fcf8e1bf95d, type: 3}
   sceneBook: {fileID: 102900000, guid: c799c91fccd1d0b4a8a9135108b0639a, type: 3}
-  completed: 0
+  completedGame: 0
+  completedBook: 0

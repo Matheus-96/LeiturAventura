@@ -464,9 +464,9 @@ MonoBehaviour:
   OnEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1730545597}
-        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
-        m_MethodName: HandleGoToNextScene
+      - m_Target: {fileID: 914374486}
+        m_TargetAssemblyTypeName: IntroScreenController, Assembly-CSharp
+        m_MethodName: EndScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3174,16 +3174,43 @@ PrefabInstance:
       propertyPath: textToShow
       value: Luz Azul - 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6845359907658573973, guid: eeef78b322841ae4c88612e2257d4969,
+        type: 3}
+      propertyPath: onEndingEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1730545597}
+    - target: {fileID: 6845359907658573973, guid: eeef78b322841ae4c88612e2257d4969,
+        type: 3}
+      propertyPath: onEndingEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleGoToNextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845359907658573973, guid: eeef78b322841ae4c88612e2257d4969,
+        type: 3}
+      propertyPath: onEndingEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StoryManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6946344657356449460, guid: eeef78b322841ae4c88612e2257d4969,
         type: 3}
       propertyPath: m_Name
-      value: Intro Text (1)
+      value: Overlay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeef78b322841ae4c88612e2257d4969, type: 3}
+--- !u!114 &914374486 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845359907658573973, guid: eeef78b322841ae4c88612e2257d4969,
+    type: 3}
+  m_PrefabInstance: {fileID: 914374485}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2def0a343cd28479e295d0408a1844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1007188644 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4541183586207564721, guid: eeef78b322841ae4c88612e2257d4969,

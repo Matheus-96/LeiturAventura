@@ -451,14 +451,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5154768993225189636}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.67, y: 0.5, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: 0.506965, w: 0.8619667}
+  m_LocalPosition: {x: -0.41, y: 0.36, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2973210406342201675}
   m_Father: {fileID: 7998366258693958273}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60.924}
 --- !u!212 &3246844087233723730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -604,6 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245959202728254368}
+  - component: {fileID: 1146307076453849190}
   m_Layer: 0
   m_Name: Guerreiro
   m_TagString: Untagged
@@ -628,6 +629,27 @@ Transform:
   - {fileID: 7998366258693958273}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1146307076453849190
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618795383722880020}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 090c60f1dfa1a3346812d2da9af96faa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5950783928713786020
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,14 +675,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5950783928713786020}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.546, z: -0.46}
+  m_LocalRotation: {x: -0, y: -0, z: -0.544119, w: 0.83900815}
+  m_LocalPosition: {x: 0.45, y: 0.45, z: -0.46000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2474253034616284627}
   m_Father: {fileID: 7998366258693958273}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -65.929}
 --- !u!212 &618037540644697594
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -18,14 +18,15 @@ public class StoryManager : MonoBehaviour
     {
         foreach(LevelSO level in flow.Levels)
         {
-            Debug.Log(level.name);
             if (!level.CompletedGame)
             {
+                level.CompletedGame = true;
                 SceneManager.LoadScene(level.SceneGame.name);
                 break;
             }
             else if (!level.CompletedBook)
             {
+                level.CompletedBook = true;
                 SceneManager.LoadScene(level.SceneBook.name);
                 break;
             }
