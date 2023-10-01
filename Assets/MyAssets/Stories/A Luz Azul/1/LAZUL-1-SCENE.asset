@@ -16,3 +16,7 @@ MonoBehaviour:
   sceneBook: {fileID: 102900000, guid: 03a8fcda73ab29347a7c1fcf8e1bf95d, type: 3}
   completedGame: 0
   completedBook: 0
+  questions:
+  - {fileID: 11400000, guid: 216ce61b896be314d841c3f20211daa6, type: 2}
+  - {fileID: 11400000, guid: 4de3e017631394048acc18242cceef9a, type: 2}
+  - {fileID: 11400000, guid: 7a953364b5ddf2849a8ac36f0c282230, type: 2}

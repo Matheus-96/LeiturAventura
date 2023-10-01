@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 public class QuestionController : MonoBehaviour
 {
-    public Page page;
+    public LevelSO levelSO;
     public List<Question> questionList;
     public GameObject statementUI;
     public GameObject[] buttonsUI;
@@ -18,7 +18,7 @@ public class QuestionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questionList = page.GetQuestions();
+        questionList = levelSO.GetQuestions();
     }
 
     // Update is called once per frame

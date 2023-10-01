@@ -54,4 +54,16 @@ public class LevelSO : ScriptableObject
         }
     }
 
+    [SerializeField]
+    private List<Question> questions = new();
+
+    public List<Question> GetQuestions()
+    {
+        return questions;
+    }
+    public void SetQuestion(Question question)
+    {
+        questions.Add(question);
+    }
+
 }
