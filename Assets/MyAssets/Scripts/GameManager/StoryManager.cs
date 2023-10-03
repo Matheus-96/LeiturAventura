@@ -32,4 +32,8 @@ public class StoryManager : MonoBehaviour
             }
         }
     }
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

@@ -18,7 +18,7 @@ public class QuestionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        questionList = levelSO.GetQuestions();
+        questionList = LevelController.Instance.level.GetQuestions();
     }
 
     // Update is called once per frame

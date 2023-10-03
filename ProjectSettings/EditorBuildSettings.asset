@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Room 3D.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyAssets/Stories/A Luz Azul/1/Scenes/LAZUL-1-QUESTION.unity
     guid: 03a8fcda73ab29347a7c1fcf8e1bf95d
+  - enabled: 1
+    path: Assets/MyAssets/Stories/A Luz Azul/2/Scenes/LAZUL-2-QUESTION 1.unity
+    guid: f00ba2027c7bd384cbfbabb593e7a14a
+  - enabled: 1
+    path: Assets/MyAssets/Stories/A Luz Azul/2/Scenes/LAZUL-2-GAME.unity
+    guid: 8b79079ef7225024cb95d0a9f0abbfbb
   m_configObjects: {}

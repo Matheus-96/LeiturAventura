@@ -65,6 +65,5 @@ public class BalloonController : MonoBehaviour
     public void ShowBaloon()
     {
         gameObject.SetActive(true);
-        LevelController.Instance.MarkCurrentStepAsDone();
     }
 }

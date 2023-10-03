@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,13 +17,13 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController Instance;
     public List<levelStep> levelFlow = new List<levelStep>();
+    public LevelSO level;
     public GameObject PanelUI;
     public Animator panelAnimator;
     public GameObject CanvasUI;
     public GameObject questionsPanelUI;
     public GameObject statementPanelUI;
     public QuestionController questionController;
-
 
     private void Awake()
     {
@@ -77,5 +78,17 @@ public class LevelController : MonoBehaviour
     {
         ShowUI();
         questionController.ShowRandomQuestionOnScreen();
+    }
+
+    public async void WaitSecondsAndDoNext(int ms)
+    {
+        await Task.Delay(ms);
+        MarkCurrentStepAsDone();
+        DoNextStep();
+    }
+
+    public async void WaitSeconds(int ms)
+    {
+        await Task.Delay(ms);
     }
 }

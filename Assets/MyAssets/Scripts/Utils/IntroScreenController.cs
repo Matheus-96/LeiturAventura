@@ -42,12 +42,11 @@ public class IntroScreenController : MonoBehaviour
 
     public IEnumerator EndRoutine()
     {
-        Debug.Log("TE");
         while (panel.color.a < 1)
         {
-            Color color = new Color(0, 0, 0, panel.color.a + 0.05f); ;
+            Color color = new Color(0, 0, 0, panel.color.a + 0.025f); ;
             panel.color = color;
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.01f);
         }
         onEndingEnd?.Invoke();
     }

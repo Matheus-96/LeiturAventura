@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Land
   - Barrier
+  - Enemy
+  - Trampoline
   layers:
   - Default
   - TransparentFX
