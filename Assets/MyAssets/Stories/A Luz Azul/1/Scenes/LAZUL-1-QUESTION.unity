@@ -658,6 +658,16 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
         type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
       propertyPath: levelFlow.Array.data[0].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6693461934015306703}
@@ -668,9 +678,34 @@ PrefabInstance:
       objectReference: {fileID: 433707517}
     - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
         type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4025554912318738885}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
       propertyPath: levelFlow.Array.data[2].action.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6693461934015306703}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MarkCurrentStepAsDone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LevelController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+        type: 3}
+      propertyPath: levelFlow.Array.data[1].action.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6690926808842804353, guid: 4cd9d0cd18c859440a010c78e385ce7a,
         type: 3}
       propertyPath: balloonController
@@ -786,6 +821,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd9d0cd18c859440a010c78e385ce7a, type: 3}
+--- !u!114 &4025554912318738885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4530490539002798904, guid: 4cd9d0cd18c859440a010c78e385ce7a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4025554912318738884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c136dee64944b7c4ba4b4f72f7757d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6693461934015306697
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,9 +7,9 @@ using UnityEngine;
 public class LevelSO : ScriptableObject
 {
     [SerializeField]
-    private SceneAsset sceneGame;
+    private string sceneGame;
 
-    public SceneAsset SceneGame
+    public string SceneGame
     {
         get { return sceneGame; }
         set
@@ -19,9 +19,9 @@ public class LevelSO : ScriptableObject
     }
 
     [SerializeField]
-    private SceneAsset sceneBook;
+    private string sceneBook;
 
-    public SceneAsset SceneBook
+    public string SceneBook
     {
         get { return sceneBook; }
         set

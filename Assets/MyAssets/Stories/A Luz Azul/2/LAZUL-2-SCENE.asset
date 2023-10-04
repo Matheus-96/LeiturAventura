@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ef7ad548f22f64aa0a4e34fc3e40de, type: 3}
   m_Name: LAZUL-2-SCENE
   m_EditorClassIdentifier: 
-  sceneGame: {fileID: 102900000, guid: 8b79079ef7225024cb95d0a9f0abbfbb, type: 3}
-  sceneBook: {fileID: 102900000, guid: f00ba2027c7bd384cbfbabb593e7a14a, type: 3}
+  sceneGame: LAZUL-2-GAME
+  sceneBook: LAZUL-2-QUESTION
   completedGame: 0
   completedBook: 0
   questions:

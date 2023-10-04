@@ -18,9 +18,15 @@ EditorBuildSettings:
     path: Assets/MyAssets/Stories/A Luz Azul/1/Scenes/LAZUL-1-QUESTION.unity
     guid: 03a8fcda73ab29347a7c1fcf8e1bf95d
   - enabled: 1
-    path: Assets/MyAssets/Stories/A Luz Azul/2/Scenes/LAZUL-2-QUESTION 1.unity
+    path: Assets/MyAssets/Stories/A Luz Azul/2/Scenes/LAZUL-2-QUESTION.unity
     guid: f00ba2027c7bd384cbfbabb593e7a14a
   - enabled: 1
     path: Assets/MyAssets/Stories/A Luz Azul/2/Scenes/LAZUL-2-GAME.unity
     guid: 8b79079ef7225024cb95d0a9f0abbfbb
+  - enabled: 1
+    path: Assets/MyAssets/Stories/A Luz Azul/3/Scenes/LAZUL-3-QUESTION.unity
+    guid: 1c5ddb96f41d99345bb02ddea6306e95
+  - enabled: 1
+    path: Assets/MyAssets/Stories/A Luz Azul/3/Scenes/LAZUL-3-GAME.unity
+    guid: e6cb6f2978f68c3408a49870a8db1f2b
   m_configObjects: {}

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,13 +20,13 @@ public class StoryManager : MonoBehaviour
             if (!level.CompletedGame)
             {
                 level.CompletedGame = true;
-                SceneManager.LoadScene(level.SceneGame.name);
+                SceneManager.LoadScene(level.SceneGame);
                 break;
             }
             else if (!level.CompletedBook)
             {
                 level.CompletedBook = true;
-                SceneManager.LoadScene(level.SceneBook.name);
+                SceneManager.LoadScene(level.SceneBook);
                 break;
             }
         }

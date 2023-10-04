@@ -37,7 +37,6 @@ public class ButtonController : MonoBehaviour
         if(isCorrectAnswer)
         {
             LevelController.Instance.DisableUI();
-            LevelController.Instance.MarkCurrentStepAsDone();
             LevelController.Instance.DoNextStep();
         } else
         {
