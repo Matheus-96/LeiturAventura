@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
+    public AudioClip wrong, correct;
     public TextMeshProUGUI textMesh;
     public Image imageUI;
     public bool isCorrectAnswer;
@@ -13,10 +14,11 @@ public class ButtonController : MonoBehaviour
     public QuestionController questionController;
     private Animation animation;
     public GameObject particleSystem;
-
+    private AudioSource audioSource;
     private void Awake()
     {
         animation = GetComponent<Animation>();
+        audioSource = GetComponent<AudioSource>();
     }
     public void SetButtonText(string text, bool _isCorrectAnswer)
     {
@@ -36,10 +38,12 @@ public class ButtonController : MonoBehaviour
     {
         if(isCorrectAnswer)
         {
+            audioSource.PlayOneShot(correct);
             LevelController.Instance.DisableUI();
             LevelController.Instance.DoNextStep();
         } else
         {
+            audioSource.PlayOneShot(wrong);
             animation.Play();
         }
         

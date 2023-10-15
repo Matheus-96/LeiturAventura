@@ -1,22 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator animator;
     SpriteRenderer sprite;
+    GameManagerSO gameManager;
     bool canControl = true;
     bool grounded = false;
+    public GameObject pointsPrefab;
+    public AudioClip jumpSound;
+    public UnityEvent onDie;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        gameManager = Resources.Load<GameManagerSO>("General/GameManager");
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    public void SetCanControl(bool state)
+    {
+        canControl = state;
     }
 
     private void Update()
@@ -27,6 +40,7 @@ public class CharacterController : MonoBehaviour
             {
                 if (grounded)
                 {
+                    audioSource.PlayOneShot(jumpSound);
                     grounded = false;
                     rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
                 }
@@ -59,6 +73,7 @@ public class CharacterController : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Hurt(collision);
+            LoseCoinsOrDie();
         }
 
         if (collision.collider.CompareTag("Trampoline"))
@@ -83,5 +98,39 @@ public class CharacterController : MonoBehaviour
         transform.rotation = Quaternion.identity;
         canControl = true;
         rb.freezeRotation = true;
+    }
+
+    void LoseCoinsOrDie()
+    {
+        int points = gameManager.Points;
+        int lostPoints = 0;
+
+        switch (points)
+        {
+            case 0:
+                Die();
+                break;
+            case >10:
+                lostPoints = Mathf.FloorToInt(points * 0.3f);
+                break;
+            default:
+                lostPoints = points;
+                break;
+        }
+        gameManager.Points = points - lostPoints;
+        SpawnPoints(lostPoints);
+    }
+
+    void Die() {
+        canControl = false;
+        onDie?.Invoke();
+    }
+
+    void SpawnPoints(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            Instantiate(pointsPrefab, transform.position, Quaternion.identity, null);
+        }
     }
 }

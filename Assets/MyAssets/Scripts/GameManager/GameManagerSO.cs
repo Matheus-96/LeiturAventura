@@ -11,6 +11,21 @@ public class GameManagerSO : ScriptableObject
     public delegate void OnPlayerCamera();
     public event OnPlayerCamera OnPlayerCanLook;
 
+    public delegate void OnCollectPointEvent();
+    public event OnCollectPointEvent OnCollectPoint;
+
+    [SerializeField]
+    private int points;
+    public int Points
+    {
+        get { return points; }
+        set
+        {
+            points = value;
+            OnCollectPoint?.Invoke();
+        }
+    }
+
     [SerializeField]
     private bool canLook;
 
@@ -33,5 +48,10 @@ public class GameManagerSO : ScriptableObject
             paused = value;
             OnPause?.Invoke();
         }
+    }
+
+    public void AddPoints(int points)
+    {
+        Points += points;
     }
 }
